@@ -15,7 +15,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
   # Specifies the latest Ubuntu runner for the job environment.
 
@@ -45,6 +44,7 @@ jobs:
       run: mvn package
     # Uses Maven to build the application and run SonarQube analysis, skipping tests for faster builds.
   docker:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       -
