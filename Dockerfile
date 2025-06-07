@@ -1,6 +1,6 @@
 #FROM openjdk:21-jdk-alpine
 FROM amazoncorretto:21-alpine3.21-full
-RUN yum install shadow-utils.x86_64 -y
+#RUN yum install shadow-utils.x86_64 -y
 RUN ls
 RUN addgroup spring 
 RUN adduser spring --group spring
