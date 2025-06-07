@@ -8,7 +8,7 @@ USER spring:spring
 ARG JAR_FILE=target/demo-0.0.1-SNAPSHOT.jar
 #COPY ${JAR_FILE} app.jar
 
-WORKDIR /app
+WORKDIR /springboot-examples
 ADD target/demo-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
 
