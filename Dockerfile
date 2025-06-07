@@ -2,6 +2,7 @@
 FROM amazoncorretto:21
 RUN yum install shadow-utils.x86_64 -y
 
+RUN ls
 RUN addgroup spring 
 RUN adduser spring --group spring
 #USER spring:spring
