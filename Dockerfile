@@ -4,7 +4,7 @@ FROM amazoncorretto:21-alpine3.21-full
 RUN ls
 RUN addgroup -S spring 
 RUN adduser -S spring -G spring
-#USER spring:spring
-#ARG JAR_FILE=target/*.jar
-#COPY ${JAR_FILE} app.jar
+USER spring:spring
+ARG JAR_FILE=target/demo-0.0.1-SNAPSHOT.jar
+COPY ${JAR_FILE} app.jar
 #ENTRYPOINT ["java","-jar","/app.jar"]
