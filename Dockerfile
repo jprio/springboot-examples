@@ -2,8 +2,8 @@
 FROM amazoncorretto:21
 RUN yum install shadow-utils.x86_64 -y
 
-RUN addgroup --system spring 
-RUN adduser --system spring --group spring
+RUN addgroup spring 
+RUN adduser spring --group spring
 #USER spring:spring
 #ARG JAR_FILE=target/*.jar
 #COPY ${JAR_FILE} app.jar
