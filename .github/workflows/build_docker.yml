@@ -41,7 +41,8 @@ jobs:
     # Caches SonarQube packages to speed up subsequent builds and analyses.
 
     - name: Build and Analyze
-      run: mvn package
+      run: mvn -B package --file pom.xml
+
     # Uses Maven to build the application and run SonarQube analysis, skipping tests for faster builds.
     - name: Login to Docker Hub
       uses: docker/login-action@v3
