@@ -1,4 +1,6 @@
-FROM openjdk:21-jdk-alpine
+#FROM openjdk:21-jdk-alpine
+FROM amazoncorretto:21
+
 RUN addgroup -S spring && adduser -S spring -G spring
 USER spring:spring
 #ARG JAR_FILE=target/*.jar
