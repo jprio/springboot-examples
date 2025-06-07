@@ -7,6 +7,7 @@ RUN adduser -S spring -G spring
 USER spring:spring
 ARG JAR_FILE=target/demo-0.0.1-SNAPSHOT.jar
 #COPY ${JAR_FILE} app.jar
+RUN echo $(ls -1 .)
 
 WORKDIR /springboot-examples
 ADD target/demo-0.0.1-SNAPSHOT.jar app.jar
