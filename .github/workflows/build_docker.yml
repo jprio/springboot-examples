@@ -42,10 +42,7 @@ jobs:
     # Caches SonarQube packages to speed up subsequent builds and analyses.
 
     - name: Build and Analyze
-      env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-      run: mvn -B verify -DskipTests org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ekart-project
+      run: mvn package
     # Uses Maven to build the application and run SonarQube analysis, skipping tests for faster builds.
   docker:
     runs-on: ubuntu-latest
