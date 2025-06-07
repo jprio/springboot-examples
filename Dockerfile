@@ -1,5 +1,5 @@
 #FROM openjdk:21-jdk-alpine
-FROM amazoncorretto:21
+FROM amazoncorretto:21-alpine3.21-full
 RUN yum install shadow-utils.x86_64 -y
 RUN yum install addgroup -y
 RUN yum install adduser -y
