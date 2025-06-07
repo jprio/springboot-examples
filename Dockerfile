@@ -5,6 +5,8 @@ RUN ls
 RUN addgroup -S spring 
 RUN adduser -S spring -G spring
 USER spring:spring
-ARG JAR_FILE=/home/runner/work/springboot-examples/springboot-examples/target/demo-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=target/demo-0.0.1-SNAPSHOT.jar
 COPY ${JAR_FILE} app.jar
-#ENTRYPOINT ["java","-jar","/app.jar"]
+
+
+ENTRYPOINT ["java","-jar","/app.jar"]
