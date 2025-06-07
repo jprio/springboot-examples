@@ -9,8 +9,8 @@ ARG JAR_FILE=target/demo-0.0.1-SNAPSHOT.jar
 #COPY ${JAR_FILE} app.jar
 RUN echo $(ls -1 .)
 
-WORKDIR /springboot-examples
-ADD target/demo-0.0.1-SNAPSHOT.jar app.jar
+WORKDIR /app
+ADD target/demo-0.0.1-SNAPSHOT.jar /app/demo-0.0.1-SNAPSHOT.jar
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-jar","/app/demo-0.0.1-SNAPSHOT.jar"]
